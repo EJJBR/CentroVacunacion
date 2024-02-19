@@ -6,6 +6,7 @@ package com.company.views;
 
 import com.company.models.ConexionPacVac;
 import com.company.models.ConexionVacunasDisponibles;
+import com.company.models.ConexionVacunasUsadas;
 import java.awt.Color;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -321,6 +322,8 @@ public class ConfirmarVacuna extends javax.swing.JPanel {
         objetoPacVac.vacunarPaciente(txtDni, txtNombre, txtApellido, txtDireccion, txtCelular, txtFechaNac, txtKit, txtLote, txtEnfermedad, txtDosis);
         ConexionVacunasDisponibles objetoVacuna=new ConexionVacunasDisponibles();
         objetoVacuna.eliminarRegistro(txtKit);
+        ConexionVacunasUsadas objetoVacUsa=new ConexionVacunasUsadas();
+        objetoVacUsa.registrarVacUsada(txtKit, txtLote, txtEnfermedad, txtDosis);
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
 
