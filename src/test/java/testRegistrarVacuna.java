@@ -1,5 +1,5 @@
 
-import com.mycompany.centrovacunacion.FormRegistrarVacuna;
+import com.company.forms.FormRegistrarVacuna;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

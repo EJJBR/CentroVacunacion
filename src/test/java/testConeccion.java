@@ -1,5 +1,5 @@
 
-import com.mycompany.centrovacunacion.CConection;
+import com.company.database.CConection;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license

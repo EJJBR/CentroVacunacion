@@ -4,8 +4,15 @@
  */
 package com.mycompany.centrovacunacion;
 
+import com.company.models.ConexionUsuario;
+import com.company.forms.FormVacunarPaciente;
+import com.company.forms.FormVacunarPacienteRespaldo;
+import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Image;
+import java.awt.PopupMenu;
 
 /**
  *
@@ -18,10 +25,14 @@ public class FormLogin extends javax.swing.JFrame {
     int xMouse;int yMouse;
     public FormLogin() {
         initComponents();
+        iniStyles();
 //        CConection objetoConexion=new CConection();
 //        objetoConexion.estableceConexion();
         this.setLocationRelativeTo(null);
         
+    }
+    public void iniStyles(){
+        btnIngresar.putClientProperty( "JButton.buttonType", "roundRect" );
     }
 
     /**
@@ -36,11 +47,11 @@ public class FormLogin extends javax.swing.JFrame {
         bg = new javax.swing.JPanel();
         plCerrar = new javax.swing.JPanel();
         lblCerrar = new javax.swing.JLabel();
+        btnIngresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         pswUsuario = new javax.swing.JPasswordField();
-        btnIngresar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -90,6 +101,28 @@ public class FormLogin extends javax.swing.JFrame {
 
         bg.add(plCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        btnIngresar.setBackground(new java.awt.Color(31, 85, 181));
+        btnIngresar.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
+        btnIngresar.setText("Ingresar");
+        btnIngresar.setBorder(null);
+        btnIngresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIngresar.setFocusTraversalPolicyProvider(true);
+        btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnIngresarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnIngresarMouseExited(evt);
+            }
+        });
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
+        bg.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 110, 40));
+
         jLabel2.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
         jLabel2.setText("Usuario:");
         bg.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
@@ -98,6 +131,7 @@ public class FormLogin extends javax.swing.JFrame {
         txtUsuario.setForeground(new java.awt.Color(204, 204, 204));
         txtUsuario.setText("Ingrese su nombre de usuario");
         txtUsuario.setBorder(null);
+        txtUsuario.setRequestFocusEnabled(false);
         txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 txtUsuarioMousePressed(evt);
@@ -128,26 +162,6 @@ public class FormLogin extends javax.swing.JFrame {
             }
         });
         bg.add(pswUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 440, 30));
-
-        btnIngresar.setBackground(new java.awt.Color(31, 85, 181));
-        btnIngresar.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
-        btnIngresar.setText("Ingresar");
-        btnIngresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnIngresarMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnIngresarMouseExited(evt);
-            }
-        });
-        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarActionPerformed(evt);
-            }
-        });
-        bg.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 110, 40));
 
         jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -225,10 +239,13 @@ public class FormLogin extends javax.swing.JFrame {
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
         ConexionUsuario objetoUsuario=new ConexionUsuario();
-        if (!objetoUsuario.logeando(txtUsuario, pswUsuario).isEmpty()) {
-            objetoUsuario.pasarDatos(txtUsuario, pswUsuario);
-            this.dispose();
-        }  
+//        if (!objetoUsuario.logeando(txtUsuario, pswUsuario).isEmpty()) {
+//            objetoUsuario.pasarDatos(txtUsuario, pswUsuario);
+//            this.dispose();
+//        }
+        FormVacunarPaciente prueba=new FormVacunarPaciente();
+        prueba.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void pswUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswUsuarioActionPerformed
@@ -304,28 +321,15 @@ public class FormLogin extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
+        
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+        FlatLightLaf.setup();
 
+        //</editor-fold>
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -336,7 +340,7 @@ public class FormLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JButton btnIngresar;
+    private static javax.swing.JButton btnIngresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -351,7 +355,7 @@ public class FormLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblCerrar;
     private javax.swing.JLabel lblFondo;
     private javax.swing.JPanel plCerrar;
-    private javax.swing.JPasswordField pswUsuario;
-    private javax.swing.JTextField txtUsuario;
+    private static javax.swing.JPasswordField pswUsuario;
+    public javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

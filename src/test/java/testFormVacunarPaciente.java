@@ -1,5 +1,5 @@
 
-import com.mycompany.centrovacunacion.FormVacunarPaciente;
+import com.company.forms.FormVacunarPaciente;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
