@@ -128,7 +128,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblBienvenido">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bienvenido, en este apartado puede buscar las vacunas del paciente usando su DNI, en caso no haya ningun registro utilice el boton &quot;Nuevo paciente&quot;,"/>
+            <Property name="text" type="java.lang.String" value="Bienvenido, en este apartado puede buscar las vacunas del paciente usando su DNI o registrar uno nuevo de ser nescesario."/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

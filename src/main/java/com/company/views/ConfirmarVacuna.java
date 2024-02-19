@@ -197,6 +197,7 @@ public class ConfirmarVacuna extends javax.swing.JPanel {
         bg.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 320, 20));
 
         txtLote.setEditable(false);
+        txtLote.setBorder(null);
         txtLote.setFocusable(false);
         txtLote.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

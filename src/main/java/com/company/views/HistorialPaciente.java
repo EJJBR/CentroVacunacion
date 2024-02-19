@@ -29,6 +29,7 @@ public class HistorialPaciente extends javax.swing.JPanel {
     private void initStyle(){
         lblBienvenido.putClientProperty( "FlatLaf.style", "font: bold $h3.regular.font" );
         lblBienvenido.setForeground(Color.BLACK);
+        txtBuscarDni.setForeground(new Color(90, 90, 90));
     }
     public ConexionPacVac enviarDatosPaciente(){
         ConexionPacVac pacienteAVacunado=new ConexionPacVac(txtDni.getText(),txtNombre.getText(),
@@ -118,7 +119,7 @@ public class HistorialPaciente extends javax.swing.JPanel {
         });
         bg.add(btnBuscarDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 50, 191, 43));
 
-        lblBienvenido.setText("Bienvenido, en este apartado puede buscar las vacunas del paciente usando su DNI, en caso no haya ningun registro utilice el boton \"Nuevo paciente\",");
+        lblBienvenido.setText("Bienvenido, en este apartado puede buscar las vacunas del paciente usando su DNI o registrar uno nuevo de ser nescesario.");
         bg.add(lblBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1040, 32));
 
         btnNuevoPaciente.setBackground(new java.awt.Color(21, 101, 192));

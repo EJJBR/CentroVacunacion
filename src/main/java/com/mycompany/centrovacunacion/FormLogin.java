@@ -33,6 +33,8 @@ public class FormLogin extends javax.swing.JFrame {
     }
     public void iniStyles(){
         btnIngresar.putClientProperty( "JButton.buttonType", "roundRect" );
+        txtUsuario.setForeground(new Color(90, 90, 90));
+        pswUsuario.setForeground(new Color(90, 90, 90));
     }
 
     /**
@@ -300,7 +302,7 @@ public class FormLogin extends javax.swing.JFrame {
         }
         if (String.valueOf(pswUsuario.getPassword()).isEmpty()) {
             pswUsuario.setText("********");
-            pswUsuario.setForeground(Color.gray);
+            pswUsuario.setForeground(new Color(90, 90, 90));
         }        
     }//GEN-LAST:event_txtUsuarioMousePressed
 
@@ -312,7 +314,7 @@ public class FormLogin extends javax.swing.JFrame {
         }
         if (txtUsuario.getText().isEmpty()) {
             txtUsuario.setText("Ingrese su nombre de usuario");
-            txtUsuario.setForeground(Color.gray);
+            txtUsuario.setForeground(new Color(90, 90, 90));
         }
     }//GEN-LAST:event_pswUsuarioMousePressed
 
@@ -321,15 +323,7 @@ public class FormLogin extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        FlatLightLaf.setup();
-
-        //</editor-fold>
-        
+        FlatMaterialLighterIJTheme.setup();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

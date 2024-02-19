@@ -60,6 +60,7 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
     private void initStyle(){
         lblBienvenido.putClientProperty( "FlatLaf.style", "font: bold $h3.regular.font" );
         lblBienvenido.setForeground(Color.BLACK);
+        txtBuscarKitOLote.setForeground(new Color(90,90,90));
     }
     
     /**
@@ -129,7 +130,7 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
         });
         bg.add(btnBuscarLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 80, 191, -1));
 
-        lblBienvenido.setText("Bienvenido, en este apartado puede buscar las vacunas disponibles para usar por kit o por lote,");
+        lblBienvenido.setText("Bienvenido, en este apartado puede buscar las vacunas disponibles para usar por kit o por lote.");
         bg.add(lblBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1040, 32));
 
         btnSeleccionarVacuna.setBackground(new java.awt.Color(21, 101, 192));

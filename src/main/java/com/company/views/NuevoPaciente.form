@@ -53,7 +53,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblBienvenido">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Bien, llegados aqui se nescesita confirmar si todos los datos ingresados en las partes anteriores son los correctos para poder registrarlos."/>
+            <Property name="text" type="java.lang.String" value="Regsitre los datos del nuevo paciente."/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
