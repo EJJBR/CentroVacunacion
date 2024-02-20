@@ -4,17 +4,22 @@
  */
 package com.company.forms;
 
+import com.company.models.ConexionRegistrarUsuario;
+import java.text.SimpleDateFormat;
 /**
  *
  * @author HP
  */
-public class FormRegistrarNuevoUsuario extends javax.swing.JPanel {
+public class FormRegistrarNuevoUsuario extends javax.swing.JFrame {
 
     /**
      * Creates new form FormAdmin
      */
     public FormRegistrarNuevoUsuario() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        ConexionRegistrarUsuario objetoUsuario=new ConexionRegistrarUsuario();
+        objetoUsuario.mostrarUsuarios(tbHistorialMedico1);
     }
 
     /**
@@ -53,6 +58,18 @@ public class FormRegistrarNuevoUsuario extends javax.swing.JPanel {
         txtDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDniActionPerformed(evt);
+            }
+        });
+
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreActionPerformed(evt);
+            }
+        });
+
+        txtApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellidoActionPerformed(evt);
             }
         });
 
@@ -157,7 +174,7 @@ public class FormRegistrarNuevoUsuario extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
@@ -196,36 +213,39 @@ public class FormRegistrarNuevoUsuario extends javax.swing.JPanel {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 650, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(22, 22, 22))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -234,15 +254,20 @@ public class FormRegistrarNuevoUsuario extends javax.swing.JPanel {
     }//GEN-LAST:event_txtDniActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        
+        ConexionRegistrarUsuario objetoUsuario = new ConexionRegistrarUsuario();
+        objetoUsuario.registrarUsuarios(txtDni, txtNombre, txtApellido, cbRol , txtContraseña, txtUsuario);
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        
+        ConexionRegistrarUsuario objetoUsuario = new ConexionRegistrarUsuario();
+        objetoUsuario.modificarRegistro(txtDni, txtNombre, txtApellido, cbRol, txtContraseña, txtUsuario);
+        objetoUsuario.mostrarUsuarios(tbHistorialMedico1);
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        
+        ConexionRegistrarUsuario objetoUsuario = new ConexionRegistrarUsuario();
+        objetoUsuario.eliminarRegistro(txtDni);
+        objetoUsuario.mostrarUsuarios(tbHistorialMedico1);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
@@ -253,15 +278,33 @@ public class FormRegistrarNuevoUsuario extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtContraseñaActionPerformed
 
-    private void tbHistorialMedico1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbHistorialMedico1MouseClicked
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_tbHistorialMedico1MouseClicked
-
     private void cbRolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRolActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbRolActionPerformed
 
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidoActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void tbHistorialMedico1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbHistorialMedico1MouseClicked
+        // TODO add your handling code here:
+        ConexionRegistrarUsuario objetoUsuario = new ConexionRegistrarUsuario();
+        objetoUsuario.seleccionarUsuario(tbHistorialMedico1, txtDni, txtNombre, txtApellido, txtDni, txtUsuario, txtApellido);
+    }//GEN-LAST:event_tbHistorialMedico1MouseClicked
+
+    public static void main(String args[]) {
+      
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FormRegistrarNuevoUsuario().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEliminar;

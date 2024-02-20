@@ -1,12 +1,23 @@
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\database\ConexionUsuario.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\mycompany\centrovacunacion\FormLogin.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\database\CConection.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\database\ConexionPacVac.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\database\LoginGetSet.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\forms\FormLogeado.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\database\ConexionVacunasDisponibles.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\forms\FormRegistrarNuevoUsuario.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\views\Principal.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\forms\FormVacunarPaciente.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\forms\FormRegistrarVacuna.java
-D:\EJJBR\unmsm\CIclo 4-V (verano 2024)\curos\Proscesos de software\Proyecto\centroVacunacion\src\main\java\com\company\forms\FormVacunarPacienteRespaldo.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\forms\FormRegistrarVacunas.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\database\CConection.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\models\ConexionRegistrarUsuario.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\models\ConexionPacVac.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\VacunasDIsponibles.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\forms\FormLogeado.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\Inicio_Inventarista.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\forms\FormVacunarPacienteRespaldo.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\forms\FormVacunarPaciente.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\HistorialPaciente.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\forms\FormRegistrarNuevoUsuario.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\database\LoginGetSet.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\forms\FormRegistrarVacunarRespaldo.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\models\ConexionUsuario.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\mycompany\centrovacunacion\FormLogin.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\RegistrarNuevaVacuna.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\NuevoPaciente.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\ConfirmarVacuna.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\ModificarVacuna.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\Inicio_PersonalSalud.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\models\ConexionVacunasUsadas.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\views\VacunasDIsponiblesInventaro.java
+C:\Users\gaxf1\OneDrive\Documentos\NetBeansProjects\New Folder\CentroVacunacion\src\main\java\com\company\models\ConexionVacunasDisponibles.java
