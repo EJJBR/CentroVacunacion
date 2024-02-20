@@ -98,6 +98,7 @@ public class HistorialPaciente extends javax.swing.JPanel {
 
             }
         ));
+        tbHistorialMedico.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tbHistorialMedico.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbHistorialMedicoMouseClicked(evt);

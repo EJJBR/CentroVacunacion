@@ -12,12 +12,12 @@ import java.text.SimpleDateFormat;
  *
  * @author HP
  */
-public class FormRegistrarVacuna extends javax.swing.JFrame {
+public class FormRegistrarVacunarRespaldo extends javax.swing.JFrame {
 
     /**
      * Creates new form FormRegistrarVacuna
      */
-    public FormRegistrarVacuna() {
+    public FormRegistrarVacunarRespaldo() {
         initComponents();
         this.setLocationRelativeTo(null);
         ConexionVacunasDisponibles objetoVacuna=new ConexionVacunasDisponibles();
@@ -333,20 +333,21 @@ public class FormRegistrarVacuna extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormRegistrarVacuna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormRegistrarVacunarRespaldo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormRegistrarVacuna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormRegistrarVacunarRespaldo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormRegistrarVacuna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormRegistrarVacunarRespaldo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormRegistrarVacuna.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormRegistrarVacunarRespaldo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormRegistrarVacuna().setVisible(true);
+                new FormRegistrarVacunarRespaldo().setVisible(true);
             }
         });
     }

@@ -1,5 +1,5 @@
 
-import com.company.forms.FormRegistrarVacuna;
+import com.company.forms.FormRegistrarVacunarRespaldo;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -12,7 +12,7 @@ import com.company.forms.FormRegistrarVacuna;
  */
 public class testRegistrarVacuna {
     public static void main(String[] args) {
-        FormRegistrarVacuna registrarVacuna=new FormRegistrarVacuna();
+        FormRegistrarVacunarRespaldo registrarVacuna=new FormRegistrarVacunarRespaldo();
         registrarVacuna.setVisible(true);
     }
 }

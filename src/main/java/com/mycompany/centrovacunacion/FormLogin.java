@@ -4,6 +4,7 @@
  */
 package com.mycompany.centrovacunacion;
 
+import com.company.forms.FormRegistrarVacunas;
 import com.company.models.ConexionUsuario;
 import com.company.forms.FormVacunarPaciente;
 import com.company.forms.FormVacunarPacienteRespaldo;
@@ -245,8 +246,11 @@ public class FormLogin extends javax.swing.JFrame {
 //            objetoUsuario.pasarDatos(txtUsuario, pswUsuario);
 //            this.dispose();
 //        }
-        FormVacunarPaciente prueba=new FormVacunarPaciente();
-        prueba.setVisible(true);
+//        FormVacunarPaciente prueba=new FormVacunarPaciente();
+//        prueba.setVisible(true);
+//        dispose();
+        FormRegistrarVacunas pruevaRegVac=new FormRegistrarVacunas();
+        pruevaRegVac.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnIngresarActionPerformed
 

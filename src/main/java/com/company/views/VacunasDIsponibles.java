@@ -104,7 +104,7 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
 
         txtBuscarKitOLote.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         txtBuscarKitOLote.setForeground(new java.awt.Color(204, 204, 204));
-        txtBuscarKitOLote.setText("Ingrese el DNI del paciente");
+        txtBuscarKitOLote.setText("Ingrese el kit o el lote que se buscara");
         txtBuscarKitOLote.setBorder(null);
         txtBuscarKitOLote.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -128,7 +128,7 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
                 btnBuscarLoteActionPerformed(evt);
             }
         });
-        bg.add(btnBuscarLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 80, 191, -1));
+        bg.add(btnBuscarLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 70, 191, -1));
 
         lblBienvenido.setText("Bienvenido, en este apartado puede buscar las vacunas disponibles para usar por kit o por lote.");
         bg.add(lblBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1040, 32));
@@ -181,6 +181,7 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
 
             }
         ));
+        tbTotalVacunasDisponibles.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         tbTotalVacunasDisponibles.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbTotalVacunasDisponiblesMouseClicked(evt);
@@ -228,7 +229,7 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
                 btnBuscarKitActionPerformed(evt);
             }
         });
-        bg.add(btnBuscarKit, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 50, 191, -1));
+        bg.add(btnBuscarKit, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 40, 191, -1));
 
         txtDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

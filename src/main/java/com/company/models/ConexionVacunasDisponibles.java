@@ -29,6 +29,18 @@ public class ConexionVacunasDisponibles {
     String dosis;
     String fechaCaducidad;
 
+    public ConexionVacunasDisponibles(String kit, String lote, String enfermedad, String dosis, String fechaCaducidad) {
+        this.kit = kit;
+        this.lote = lote;
+        this.enfermedad = enfermedad;
+        this.dosis = dosis;
+        this.fechaCaducidad = fechaCaducidad;
+    }
+
+    public ConexionVacunasDisponibles() {
+        
+    }
+    
     public String getKit() {
         return kit;
     }
