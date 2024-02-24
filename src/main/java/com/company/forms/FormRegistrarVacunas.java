@@ -179,7 +179,8 @@ public class FormRegistrarVacunas extends javax.swing.JFrame {
         btnVacunasDisponibles.setBorderPainted(false);
         btnVacunasDisponibles.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVacunasDisponibles.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnVacunasDisponibles.setIconTextGap(1);
+        btnVacunasDisponibles.setIconTextGap(10);
+        btnVacunasDisponibles.setMargin(new java.awt.Insets(2, 10, 3, 14));
         btnVacunasDisponibles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVacunasDisponiblesActionPerformed(evt);

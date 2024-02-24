@@ -31,6 +31,20 @@ public class ConexionRegistrarUsuario {
     String usuario;
     String clave;
 
+    public ConexionRegistrarUsuario() {
+    }
+
+    public ConexionRegistrarUsuario(String nombre, String apellido, String dni, String rol, String usuario, String clave) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.rol = rol;
+        this.usuario = usuario;
+        this.clave = clave;
+    }
+
+    
+    
     public String getNombre() {
         return nombre;
     }
@@ -160,14 +174,14 @@ public class ConexionRegistrarUsuario {
             JOptionPane.showMessageDialog(null, "No se ha podido modificar el registro, error: "+e);
         }
     }
-    public void seleccionarUsuario(JTable paramTableUser,JTextField paramDni,JTextField paramNombre,JTextField paramApellido,JTextField paramRol,JTextField paramUsuario, JTextField paramClave){
+    public void seleccionarUsuario(JTable paramTableUser,JTextField paramDni,JTextField paramNombre,JTextField paramApellido,JComboBox paramRol,JTextField paramUsuario, JTextField paramClave){
         try {
             int fila=paramTableUser.getSelectedRow();
             if(fila>=0){
                 paramDni.setText(paramTableUser.getValueAt(fila, 0).toString());
                 paramNombre.setText(paramTableUser.getValueAt(fila, 1).toString());
                 paramApellido.setText(paramTableUser.getValueAt(fila, 2).toString());
-                paramRol.setText(paramTableUser.getValueAt(fila, 3).toString());
+                paramRol.addItem(paramTableUser.getValueAt(fila, 3).toString());
                 paramClave.setText(paramTableUser.getValueAt(fila, 4).toString());
                 paramUsuario.setText(paramTableUser.getValueAt(fila, 5).toString());
             }else{
