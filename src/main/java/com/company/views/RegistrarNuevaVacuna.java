@@ -77,7 +77,7 @@ public class RegistrarNuevaVacuna extends javax.swing.JPanel {
         bg.setBackground(new java.awt.Color(255, 255, 255));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblBienvenido.setText("Regsitre los datos del nuevo paciente.");
+        lblBienvenido.setText("Regsitre los datos de la nueva vacuna..");
         bg.add(lblBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1040, 32));
 
         txtKit.setForeground(new java.awt.Color(204, 204, 204));
