@@ -274,11 +274,15 @@ public class RegistrarNuevaVacuna extends javax.swing.JPanel {
             txtKit.setText("");
             txtKit.setForeground(Color.BLACK);
         }
-        if (txtLote.getText().isEmpty() || txtEnfermedad.getText().isEmpty() || txtDosis.getText().isEmpty()) {
+        if (txtLote.getText().isEmpty()) {
             txtLote.setText("Digite el lote de la vacuna");
             txtLote.setForeground(new Color(90, 90, 90));
+        }
+        if (txtEnfermedad.getText().isEmpty() ) {
             txtEnfermedad.setText("Digite la enfermedad de la vacuna");
             txtEnfermedad.setForeground(new Color(90, 90, 90));
+        }
+        if (txtDosis.getText().isEmpty()) {
             txtDosis.setText("Digite la dosis de la vacuna");
             txtDosis.setForeground(new Color(90, 90, 90));
         }
@@ -290,11 +294,15 @@ public class RegistrarNuevaVacuna extends javax.swing.JPanel {
             txtLote.setText("");
             txtLote.setForeground(Color.BLACK);
         }
-        if (txtKit.getText().isEmpty() || txtEnfermedad.getText().isEmpty() || txtDosis.getText().isEmpty()) {
+        if (txtKit.getText().isEmpty()) {
             txtKit.setText("Digite el kit de la vacuna");
             txtKit.setForeground(new Color(90, 90, 90));
+        }
+        if (txtEnfermedad.getText().isEmpty() ) {
             txtEnfermedad.setText("Digite la enfermedad de la vacuna");
             txtEnfermedad.setForeground(new Color(90, 90, 90));
+        }
+        if (txtDosis.getText().isEmpty()) {
             txtDosis.setText("Digite la dosis de la vacuna");
             txtDosis.setForeground(new Color(90, 90, 90));
         }
@@ -306,11 +314,15 @@ public class RegistrarNuevaVacuna extends javax.swing.JPanel {
             txtEnfermedad.setText("");
             txtEnfermedad.setForeground(Color.BLACK);
         }
-        if (txtKit.getText().isEmpty() || txtLote.getText().isEmpty() || txtDosis.getText().isEmpty()) {
+        if (txtKit.getText().isEmpty() ) {
             txtKit.setText("Digite el kit de la vacuna");
             txtKit.setForeground(new Color(90, 90, 90));
+        }
+        if (txtLote.getText().isEmpty() ) {
             txtLote.setText("Digite el lote de la vacuna");
             txtLote.setForeground(new Color(90, 90, 90));
+        }
+        if (txtDosis.getText().isEmpty()) {
             txtDosis.setText("Digite la dosis de la vacuna");
             txtDosis.setForeground(new Color(90, 90, 90));
         }
@@ -322,11 +334,15 @@ public class RegistrarNuevaVacuna extends javax.swing.JPanel {
             txtDosis.setText("");
             txtDosis.setForeground(Color.BLACK);
         }
-        if (txtKit.getText().isEmpty() || txtLote.getText().isEmpty() || txtEnfermedad.getText().isEmpty()) {
+        if (txtKit.getText().isEmpty() ) {
             txtKit.setText("Digite el kit de la vacuna");
             txtKit.setForeground(new Color(90, 90, 90));
+        }
+        if (txtLote.getText().isEmpty() ) {
             txtLote.setText("Digite el lote de la vacuna");
             txtLote.setForeground(new Color(90, 90, 90));
+        }
+        if (txtEnfermedad.getText().isEmpty()) {
             txtEnfermedad.setText("Digite la enfermedad de la vacuna");
             txtEnfermedad.setForeground(new Color(90, 90, 90));
         }

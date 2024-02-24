@@ -304,14 +304,19 @@ public class NuevoPaciente extends javax.swing.JPanel {
             txtDni.setText("");
             txtDni.setForeground(Color.BLACK);
         }
-        if (txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty() || txtDireccion.getText().isEmpty()
-                || txtCelular.getText().isEmpty()) {
+        if (txtNombre.getText().isEmpty() ) {
             txtNombre.setText("Digite el nombre(s) del paciente");
             txtNombre.setForeground(new Color(90, 90, 90));
+        }
+        if (txtApellido.getText().isEmpty() ) {
             txtApellido.setText("Digite los apellidos del paciente");
             txtApellido.setForeground(new Color(90, 90, 90));
+        }
+        if (txtDireccion.getText().isEmpty()) {
             txtDireccion.setText("Digite la direccion del paciente");
             txtDireccion.setForeground(new Color(90, 90, 90));
+        }
+        if (txtCelular.getText().isEmpty()) {
             txtCelular.setText("Digite algun telefono de contacto del paciente");
             txtCelular.setForeground(new Color(90, 90, 90));
         }
@@ -323,14 +328,19 @@ public class NuevoPaciente extends javax.swing.JPanel {
             txtNombre.setText("");
             txtNombre.setForeground(Color.BLACK);
         }
-        if (txtDni.getText().isEmpty() || txtApellido.getText().isEmpty() || txtDireccion.getText().isEmpty()
-                || txtCelular.getText().isEmpty()) {
+        if (txtDni.getText().isEmpty()) {
             txtDni.setText("Digiete el DNI del paciente");
             txtDni.setForeground(new Color(90, 90, 90));
+        }
+        if (txtApellido.getText().isEmpty()) {
             txtApellido.setText("Digite los apellidos del paciente");
             txtApellido.setForeground(new Color(90, 90, 90));
+        }
+        if (txtDireccion.getText().isEmpty()) {
             txtDireccion.setText("Digite la direccion del paciente");
             txtDireccion.setForeground(new Color(90, 90, 90));
+        }
+        if (txtCelular.getText().isEmpty()) {
             txtCelular.setText("Digite algun telefono de contacto del paciente");
             txtCelular.setForeground(new Color(90, 90, 90));
         }
@@ -342,14 +352,19 @@ public class NuevoPaciente extends javax.swing.JPanel {
             txtApellido.setText("");
             txtApellido.setForeground(Color.BLACK);
         }
-        if (txtDni.getText().isEmpty() || txtNombre.getText().isEmpty() || txtDireccion.getText().isEmpty()
-                || txtCelular.getText().isEmpty()) {
+        if (txtDni.getText().isEmpty()) {
             txtDni.setText("Digiete el DNI del paciente");
             txtDni.setForeground(new Color(90, 90, 90));
+        }
+        if (txtNombre.getText().isEmpty() ) {
             txtNombre.setText("Digite el nombre(s) del paciente");
             txtNombre.setForeground(new Color(90, 90, 90));
+        }
+        if (txtDireccion.getText().isEmpty()) {
             txtDireccion.setText("Digite la direccion del paciente");
             txtDireccion.setForeground(new Color(90, 90, 90));
+        }
+        if (txtCelular.getText().isEmpty()) {
             txtCelular.setText("Digite algun telefono de contacto del paciente");
             txtCelular.setForeground(new Color(90, 90, 90));
         }
@@ -361,14 +376,19 @@ public class NuevoPaciente extends javax.swing.JPanel {
             txtDireccion.setText("");
             txtDireccion.setForeground(Color.BLACK);
         }
-        if (txtDni.getText().isEmpty() || txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty()
-                || txtCelular.getText().isEmpty()) {
+        if (txtDni.getText().isEmpty()) {
             txtDni.setText("Digiete el DNI del paciente");
             txtDni.setForeground(new Color(90, 90, 90));
+        }
+        if (txtNombre.getText().isEmpty()) {
             txtNombre.setText("Digite el nombre(s) del paciente");
             txtNombre.setForeground(new Color(90, 90, 90));
+        }
+        if (txtApellido.getText().isEmpty()) {
             txtApellido.setText("Digite los apellidos del paciente");
             txtApellido.setForeground(new Color(90, 90, 90));
+        }
+        if (txtCelular.getText().isEmpty()) {
             txtCelular.setText("Digite algun telefono de contacto del paciente");
             txtCelular.setForeground(new Color(90, 90, 90));
         }
@@ -380,14 +400,19 @@ public class NuevoPaciente extends javax.swing.JPanel {
             txtCelular.setText("");
             txtCelular.setForeground(Color.BLACK);
         }
-        if (txtDni.getText().isEmpty() || txtNombre.getText().isEmpty() || txtApellido.getText().isEmpty()
-                || txtDireccion.getText().isEmpty()) {
+        if (txtDni.getText().isEmpty() ) {
             txtDni.setText("Digiete el DNI del paciente");
             txtDni.setForeground(new Color(90, 90, 90));
+        }
+        if (txtNombre.getText().isEmpty() ) {
             txtNombre.setText("Digite el nombre(s) del paciente");
             txtNombre.setForeground(new Color(90, 90, 90));
+        }
+        if (txtApellido.getText().isEmpty()) {
             txtApellido.setText("Digite los apellidos del paciente");
             txtApellido.setForeground(new Color(90, 90, 90));
+        }
+        if (txtDireccion.getText().isEmpty()) {
             txtDireccion.setText("Digite la direccion del paciente");
             txtDireccion.setForeground(new Color(90, 90, 90));
         }
