@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -203,6 +204,43 @@ public class ConexionRegistrarUsuarioTest {
             JOptionPane.showMessageDialog(null, "Se elimino el registro correctamente.");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error al eliminar el registro, error: "+e.toString());
+        }
+    }
+    public void filtarPorDNI(JTable paramTableTotalUsuariosEncontrados, JTextField DNIBuscado){
+        CConection objetoConection=new CConection();
+        DefaultTableModel modelo=new DefaultTableModel();
+        TableRowSorter<TableModel> FIltrarPorDNI=new TableRowSorter<TableModel>(modelo);
+        paramTableTotalUsuariosEncontrados.setRowSorter(FIltrarPorDNI);
+        String sql="";
+        modelo.addColumn("Dni");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido");
+        modelo.addColumn("Rol");
+        modelo.addColumn("Usuario");
+        modelo.addColumn("Clave");
+        paramTableTotalUsuariosEncontrados.setModel(modelo);
+        sql="select*from centrovacunacion.usuarios;";
+        String[] datos=new String [6];
+        Statement st;
+        try {
+            st=objetoConection.estableceConexion().createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(6);
+                datos[5]=rs.getString(5);
+                modelo.addRow(datos);
+            }
+            paramTableTotalUsuariosEncontrados.setModel(modelo);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "No se pudo mostrar los registros, error: "+e);
+        }
+        try {
+            FIltrarPorDNI.setRowFilter(RowFilter.regexFilter(DNIBuscado.getText(), 0));
+        } catch (Exception e) {
         }
     }
 }

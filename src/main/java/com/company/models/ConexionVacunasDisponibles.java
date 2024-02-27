@@ -11,9 +11,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import static java.util.Locale.filter;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -194,6 +196,41 @@ public class ConexionVacunasDisponibles {
 //            JOptionPane.showMessageDialog(null, "Se elimino el registro correctamente.");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error al eliminar el registro, error: "+e.toString());
+        }
+    }
+    public void filtrarVacunaPorKitOLote(JTable paramTableTotalVacunasEncontradas, JTextField kitBuscado, int indice){
+        CConection objetoConection=new CConection();
+        DefaultTableModel modelo=new DefaultTableModel();
+        TableRowSorter<TableModel> filtrarPorKit=new TableRowSorter<TableModel>(modelo);
+        paramTableTotalVacunasEncontradas.setRowSorter(filtrarPorKit);
+        String sql="";
+        modelo.addColumn("Kit");
+        modelo.addColumn("Lote");
+        modelo.addColumn("Enfermedad");
+        modelo.addColumn("Dosis");
+        modelo.addColumn("Fecha de caducidad");
+        paramTableTotalVacunasEncontradas.setModel(modelo);
+        sql="select*from centrovacunacion.vacunasdisponibles;";
+        String[] datos=new String [5];
+        Statement st;
+        try {
+            st=objetoConection.estableceConexion().createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                modelo.addRow(datos);
+            }
+            paramTableTotalVacunasEncontradas.setModel(modelo);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "No se pudo mostrar los registros, error: "+e);
+        }
+        try {
+            filtrarPorKit.setRowFilter(RowFilter.regexFilter(kitBuscado.getText(), indice));
+        } catch (Exception e) {
         }
     }
 }

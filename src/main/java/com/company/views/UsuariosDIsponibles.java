@@ -88,6 +88,11 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
                 txtDNIBuscarActionPerformed(evt);
             }
         });
+        txtDNIBuscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtDNIBuscarKeyReleased(evt);
+            }
+        });
         bg.add(txtDNIBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 839, 43));
 
         lblBienvenido.setText("Bienvenido, en este apartado puede buscar los usuarios disponibles para usando su DNI.");
@@ -220,11 +225,19 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
 
     private void btnBuscarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarDNIActionPerformed
         // TODO add your handling code here:
+        ConexionRegistrarUsuarioTest usuarioBuscado=new ConexionRegistrarUsuarioTest();
+        usuarioBuscado.filtarPorDNI(tbTotalVacunasDisponibles, txtDNIBuscar);
     }//GEN-LAST:event_btnBuscarDNIActionPerformed
 
     private void txtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtClaveActionPerformed
+
+    private void txtDNIBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDNIBuscarKeyReleased
+        // TODO add your handling code here:
+        ConexionRegistrarUsuarioTest usuarioBuscado=new ConexionRegistrarUsuarioTest();
+        usuarioBuscado.filtarPorDNI(tbTotalVacunasDisponibles, txtDNIBuscar);
+    }//GEN-LAST:event_txtDNIBuscarKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

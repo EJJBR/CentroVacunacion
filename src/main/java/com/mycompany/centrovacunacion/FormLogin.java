@@ -14,6 +14,7 @@ import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.PopupMenu;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -134,7 +135,6 @@ public class FormLogin extends javax.swing.JFrame {
         txtUsuario.setForeground(new java.awt.Color(204, 204, 204));
         txtUsuario.setText("Ingrese su nombre de usuario");
         txtUsuario.setBorder(null);
-        txtUsuario.setRequestFocusEnabled(false);
         txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 txtUsuarioMousePressed(evt);
@@ -242,16 +242,13 @@ public class FormLogin extends javax.swing.JFrame {
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
         ConexionUsuario objetoUsuario=new ConexionUsuario();
-//        if (!objetoUsuario.logeando(txtUsuario, pswUsuario).isEmpty()) {
-//            objetoUsuario.pasarDatos(txtUsuario, pswUsuario);
-//            this.dispose();
-//        }
-//        FormVacunarPaciente prueba=new FormVacunarPaciente();
-//        prueba.setVisible(true);
-//        dispose();
-        FormRegistrarVacunas pruevaRegVac=new FormRegistrarVacunas();
-        pruevaRegVac.setVisible(true);
-        dispose();
+        if (!objetoUsuario.logeando(txtUsuario, pswUsuario).isEmpty()) {
+            objetoUsuario.ingresarFormsPorRol(txtUsuario, pswUsuario);
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "El usuario o la contraseña son incorrectos.");
+        }
+
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     private void pswUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswUsuarioActionPerformed

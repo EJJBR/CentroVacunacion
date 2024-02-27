@@ -116,6 +116,11 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
                 txtBuscarKitOLoteActionPerformed(evt);
             }
         });
+        txtBuscarKitOLote.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtBuscarKitOLoteKeyTyped(evt);
+            }
+        });
         bg.add(txtBuscarKitOLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 839, 43));
 
         btnBuscarLote.setBackground(new java.awt.Color(21, 101, 192));
@@ -243,6 +248,8 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
 
     private void btnBuscarLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarLoteActionPerformed
         // TODO add your handling code here:
+        ConexionVacunasDisponibles objetoBuscarKit=new ConexionVacunasDisponibles();
+        objetoBuscarKit.filtrarVacunaPorKitOLote(tbTotalVacunasDisponibles, txtBuscarKitOLote,1);
     }//GEN-LAST:event_btnBuscarLoteActionPerformed
 
     private void txtBuscarKitOLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarKitOLoteActionPerformed
@@ -251,7 +258,7 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
 
     private void txtBuscarKitOLoteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtBuscarKitOLoteMousePressed
         // TODO add your handling code here:
-        if(txtBuscarKitOLote.getText().equals("Ingrese el DNI del paciente")){
+        if(txtBuscarKitOLote.getText().equals("Ingrese el kit o el lote que se buscara")){
             txtBuscarKitOLote.setText("");
             txtBuscarKitOLote.setForeground(Color.BLACK);
         }
@@ -305,11 +312,17 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
 
     private void btnBuscarKitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarKitActionPerformed
         // TODO add your handling code here:
+        ConexionVacunasDisponibles objetoBuscarKit=new ConexionVacunasDisponibles();
+        objetoBuscarKit.filtrarVacunaPorKitOLote(tbTotalVacunasDisponibles, txtBuscarKitOLote,0);
     }//GEN-LAST:event_btnBuscarKitActionPerformed
 
     private void txtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDniActionPerformed
+
+    private void txtBuscarKitOLoteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKitOLoteKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBuscarKitOLoteKeyTyped
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
