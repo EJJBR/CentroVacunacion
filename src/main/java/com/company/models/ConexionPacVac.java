@@ -14,6 +14,7 @@ import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -230,6 +231,50 @@ public class ConexionPacVac {
             }else{
                 JOptionPane.showMessageDialog(null, "Fila no seleccionada.");
             }
+        } catch (Exception e) {
+        }
+    }
+    public void filtrarPorDNI(JTable paramTableHistorMed,JTextField pramDNIBuscado){
+        CConection objetoConection=new CConection();
+        DefaultTableModel modelo=new DefaultTableModel();
+        TableRowSorter<TableModel> fIltrarPorDNI=new TableRowSorter<TableModel>(modelo);
+        paramTableHistorMed.setRowSorter(fIltrarPorDNI);
+        String sql="";
+        modelo.addColumn("DNI");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido");
+        modelo.addColumn("Direccion");
+        modelo.addColumn("Celular");
+        modelo.addColumn("Fecha de nacimiento");
+        modelo.addColumn("Enferemedad");
+        modelo.addColumn("Dosis");
+        modelo.addColumn("Fecha de vacuna");
+        paramTableHistorMed.setModel(modelo);
+        sql="select dniPacVac, nombrePacVac, apellidoVacPac, direcVacPac, celVacPac, fechaNacPacVac, enferVacPac,"
+                + "dosisVacPac,fechaVac from centrovacunacion.pacientevacunado;";
+        String[] datos=new String[9];
+        Statement st;
+        try {
+            st=objetoConection.estableceConexion().createStatement();
+            ResultSet rs=st.executeQuery(sql);
+            while(rs.next()){
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(4);
+                datos[4]=rs.getString(5);
+                datos[5]=rs.getString(6);
+                datos[6]=rs.getString(7);
+                datos[7]=rs.getString(8);
+                datos[8]=rs.getString(9);
+                modelo.addRow(datos);
+            }
+            paramTableHistorMed.setModel(modelo);
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, "No se pudo mostrar los registros, error: "+e);
+        }
+        try {
+            fIltrarPorDNI.setRowFilter(RowFilter.regexFilter(pramDNIBuscado.getText(), 0));
         } catch (Exception e) {
         }
     }

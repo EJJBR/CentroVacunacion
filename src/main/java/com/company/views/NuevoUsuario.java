@@ -234,6 +234,7 @@ public class NuevoUsuario extends javax.swing.JPanel {
         cbRol.setForeground(new java.awt.Color(204, 204, 204));
         cbRol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione el rol del nuevo usuario", "Admin", "Inventarista", "Personal medico" }));
         cbRol.setBorder(null);
+        cbRol.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         cbRol.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 cbRolMouseClicked(evt);

@@ -241,6 +241,7 @@ public class ConexionRegistrarUsuarioTest {
         try {
             FIltrarPorDNI.setRowFilter(RowFilter.regexFilter(DNIBuscado.getText(), 0));
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al filtrar: "+e.toString());
         }
     }
 }

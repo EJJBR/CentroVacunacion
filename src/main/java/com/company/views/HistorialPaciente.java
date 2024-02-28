@@ -85,6 +85,11 @@ public class HistorialPaciente extends javax.swing.JPanel {
                 txtBuscarDniActionPerformed(evt);
             }
         });
+        txtBuscarDni.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtBuscarDniKeyReleased(evt);
+            }
+        });
         bg.add(txtBuscarDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 839, 43));
 
         tbHistorialMedico.setModel(new javax.swing.table.DefaultTableModel(
@@ -246,6 +251,12 @@ public class HistorialPaciente extends javax.swing.JPanel {
     private void txtFechaNacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaNacActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtFechaNacActionPerformed
+
+    private void txtBuscarDniKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarDniKeyReleased
+        // TODO add your handling code here:
+        ConexionPacVac pacBuscadoDNI=new ConexionPacVac();
+        pacBuscadoDNI.filtrarPorDNI(tbHistorialMedico, txtBuscarDni);
+    }//GEN-LAST:event_txtBuscarDniKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

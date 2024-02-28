@@ -75,7 +75,6 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
         bg = new javax.swing.JPanel();
         jSeparator4 = new javax.swing.JSeparator();
         txtBuscarKitOLote = new javax.swing.JTextField();
-        btnBuscarLote = new javax.swing.JButton();
         lblBienvenido = new javax.swing.JLabel();
         btnSeleccionarVacuna = new javax.swing.JButton();
         txtLote = new javax.swing.JTextField();
@@ -90,8 +89,8 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
         txtCelular = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
-        btnBuscarKit = new javax.swing.JButton();
         txtDni = new javax.swing.JTextField();
+        cbTipoDeBusqueda = new javax.swing.JComboBox<>();
 
         setPreferredSize(new java.awt.Dimension(1060, 524));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -117,23 +116,17 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
             }
         });
         txtBuscarKitOLote.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txtBuscarKitOLoteKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtBuscarKitOLoteKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtBuscarKitOLoteKeyTyped(evt);
             }
         });
         bg.add(txtBuscarKitOLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 839, 43));
-
-        btnBuscarLote.setBackground(new java.awt.Color(21, 101, 192));
-        btnBuscarLote.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnBuscarLote.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscarLote.setText("Buscar por Lote");
-        btnBuscarLote.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBuscarLote.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarLoteActionPerformed(evt);
-            }
-        });
-        bg.add(btnBuscarLote, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 70, 191, -1));
 
         lblBienvenido.setText("Bienvenido, en este apartado puede buscar las vacunas disponibles para usar por kit o por lote.");
         bg.add(lblBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1040, 32));
@@ -224,18 +217,6 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
         bg.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, 10, 30));
         bg.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 490, 10, 20));
 
-        btnBuscarKit.setBackground(new java.awt.Color(21, 101, 192));
-        btnBuscarKit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnBuscarKit.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscarKit.setText("Buscar por Kit");
-        btnBuscarKit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBuscarKit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarKitActionPerformed(evt);
-            }
-        });
-        bg.add(btnBuscarKit, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 40, 191, -1));
-
         txtDni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDniActionPerformed(evt);
@@ -243,14 +224,14 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
         });
         bg.add(txtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 490, 80, 20));
 
+        cbTipoDeBusqueda.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cbTipoDeBusqueda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "buscar por kit", "buscar por lote" }));
+        cbTipoDeBusqueda.setBorder(null);
+        cbTipoDeBusqueda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bg.add(cbTipoDeBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(852, 52, 200, 40));
+
         add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1062, 530));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnBuscarLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarLoteActionPerformed
-        // TODO add your handling code here:
-        ConexionVacunasDisponibles objetoBuscarKit=new ConexionVacunasDisponibles();
-        objetoBuscarKit.filtrarVacunaPorKitOLote(tbTotalVacunasDisponibles, txtBuscarKitOLote,1);
-    }//GEN-LAST:event_btnBuscarLoteActionPerformed
 
     private void txtBuscarKitOLoteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarKitOLoteActionPerformed
         // TODO add your handling code here:
@@ -310,12 +291,6 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDireccionActionPerformed
 
-    private void btnBuscarKitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarKitActionPerformed
-        // TODO add your handling code here:
-        ConexionVacunasDisponibles objetoBuscarKit=new ConexionVacunasDisponibles();
-        objetoBuscarKit.filtrarVacunaPorKitOLote(tbTotalVacunasDisponibles, txtBuscarKitOLote,0);
-    }//GEN-LAST:event_btnBuscarKitActionPerformed
-
     private void txtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDniActionPerformed
@@ -324,12 +299,28 @@ public class VacunasDIsponibles extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBuscarKitOLoteKeyTyped
 
+    private void txtBuscarKitOLoteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKitOLoteKeyPressed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtBuscarKitOLoteKeyPressed
+
+    private void txtBuscarKitOLoteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarKitOLoteKeyReleased
+        // TODO add your handling code here:
+        if(cbTipoDeBusqueda.getSelectedItem().toString().equals("buscar por kit")){
+            ConexionVacunasDisponibles buscarPorKit=new ConexionVacunasDisponibles();
+            buscarPorKit.filtrarVacunaPorKitOLote(tbTotalVacunasDisponibles, txtBuscarKitOLote, 0);
+        }
+        if (cbTipoDeBusqueda.getSelectedItem().toString().equals("buscar por lote")) {
+            ConexionVacunasDisponibles buscarPorLote=new ConexionVacunasDisponibles();
+            buscarPorLote.filtrarVacunaPorKitOLote(tbTotalVacunasDisponibles, txtBuscarKitOLote, 1);
+        }
+    }//GEN-LAST:event_txtBuscarKitOLoteKeyReleased
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JButton btnBuscarKit;
-    private javax.swing.JButton btnBuscarLote;
     private javax.swing.JButton btnSeleccionarVacuna;
+    private javax.swing.JComboBox<String> cbTipoDeBusqueda;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel lblBienvenido;
