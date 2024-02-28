@@ -7,6 +7,8 @@ package com.company.database;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,8 +28,10 @@ public class CConection {
             Class.forName("com.mysql.jdbc.Driver");
             conectar=DriverManager.getConnection(cadena,usuario,contraseña);
             //JOptionPane.showMessageDialog(null,"Se conecto a la base de datos");
-        } catch (ClassNotFoundException | SQLException e) { 
+        } catch (SQLException e) { 
             JOptionPane.showMessageDialog(null,"No se conecto a la base de datos, error: "+e.toString());
+        } catch(ClassNotFoundException ex){
+            Logger.getLogger(CConection.class.getName()).log(Level.SEVERE,null, ex);
         }
         return conectar;
     }
