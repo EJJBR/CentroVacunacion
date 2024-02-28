@@ -113,7 +113,6 @@ public class FormRegistrarNuevosUsuarios extends javax.swing.JFrame {
         btnUsuariosRegistrardos = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         btnNuevosUsuarios = new javax.swing.JButton();
-        btnReportes = new javax.swing.JButton();
         pnlContent = new javax.swing.JPanel();
         pnlHeader = new javax.swing.JPanel();
         lblNav = new javax.swing.JLabel();
@@ -191,30 +190,13 @@ public class FormRegistrarNuevosUsuarios extends javax.swing.JFrame {
             }
         });
 
-        btnReportes.setBackground(new java.awt.Color(21, 101, 192));
-        btnReportes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnReportes.setForeground(new java.awt.Color(255, 255, 255));
-        btnReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ReportesLogo.png"))); // NOI18N
-        btnReportes.setText("Reportes");
-        btnReportes.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 9, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnReportes.setBorderPainted(false);
-        btnReportes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnReportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnReportes.setIconTextGap(17);
-        btnReportes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnReportesActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
         pnlMenu.setLayout(pnlMenuLayout);
         pnlMenuLayout.setHorizontalGroup(
             pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btnUsuariosRegistrardos, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(btnNuevosUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(pnlMenuLayout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,14 +214,11 @@ public class FormRegistrarNuevosUsuarios extends javax.swing.JFrame {
                 .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnUsuariosRegistrardos, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlMenuLayout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlMenuLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(btnNuevosUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlMenuLayout.createSequentialGroup()
                         .addGap(140, 140, 140)
-                        .addComponent(btnReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         backGround.add(pnlMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 620));
@@ -362,10 +341,6 @@ public class FormRegistrarNuevosUsuarios extends javax.swing.JFrame {
         yMouse=evt.getY();
     }//GEN-LAST:event_jPanel1MousePressed
 
-    private void btnReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnReportesActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -383,7 +358,6 @@ public class FormRegistrarNuevosUsuarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel backGround;
     private javax.swing.JButton btnNuevosUsuarios;
-    private javax.swing.JButton btnReportes;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnUsuariosRegistrardos;
     private javax.swing.JPanel jPanel1;

@@ -277,14 +277,19 @@ public class NuevoUsuario extends javax.swing.JPanel {
             txtDNI.setText("");
             txtDNI.setForeground(Color.black);
         }
-        if(txtApellido.getText().isEmpty()||txtNombre.getText().isEmpty()||txtUsuario.getText().isEmpty()||
-                txtContraseña.getText().isEmpty()){
-            txtNombre.setText("Digite el nombre(s) del usuario");
-            txtNombre.setForeground(new Color(90, 90, 90));
+        if(txtApellido.getText().isEmpty()){
             txtApellido.setText("Digite los apellidos del nuevo usuario");
             txtApellido.setForeground(new Color(90, 90, 90));
+        }
+        if (txtNombre.getText().isEmpty()) {
+            txtNombre.setText("Digite el nombre(s) del usuario");
+            txtNombre.setForeground(new Color(90, 90, 90));
+        }
+        if (txtUsuario.getText().isEmpty()) {
             txtUsuario.setText("Digite el usuario del nuevo registro");
             txtUsuario.setForeground(new Color(90, 90, 90));
+        }
+        if (txtContraseña.getText().isEmpty()) {
             txtContraseña.setText("Digite la contraseña del nuevo registro");
             txtContraseña.setForeground(new Color(90, 90, 90));
         }

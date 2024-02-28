@@ -31,7 +31,7 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
         initComponents();
         initStyle();
         ConexionRegistrarUsuarioTest objetoRegUsu=new ConexionRegistrarUsuarioTest();
-        objetoRegUsu.mostrarUsuarios(tbTotalVacunasDisponibles);
+        objetoRegUsu.mostrarUsuarios(tbTotalUsuarios);
     }
 
     private void initStyle(){
@@ -54,7 +54,7 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
         txtDNIBuscar = new javax.swing.JTextField();
         lblBienvenido = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tbTotalVacunasDisponibles = new javax.swing.JTable();
+        tbTotalUsuarios = new javax.swing.JTable();
         txtNombre = new javax.swing.JTextField();
         txtApellido = new javax.swing.JTextField();
         txtDni = new javax.swing.JTextField();
@@ -98,7 +98,7 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
         lblBienvenido.setText("Bienvenido, en este apartado puede buscar los usuarios disponibles para usando su DNI.");
         bg.add(lblBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1040, 32));
 
-        tbTotalVacunasDisponibles.setModel(new javax.swing.table.DefaultTableModel(
+        tbTotalUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
                 {},
@@ -109,13 +109,13 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
 
             }
         ));
-        tbTotalVacunasDisponibles.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tbTotalVacunasDisponibles.addMouseListener(new java.awt.event.MouseAdapter() {
+        tbTotalUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        tbTotalUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbTotalVacunasDisponiblesMouseClicked(evt);
+                tbTotalUsuariosMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(tbTotalVacunasDisponibles);
+        jScrollPane1.setViewportView(tbTotalUsuarios);
 
         bg.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 111, 1050, 230));
         bg.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 500, 130, 20));
@@ -190,11 +190,11 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtDNIBuscarMousePressed
 
-    private void tbTotalVacunasDisponiblesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbTotalVacunasDisponiblesMouseClicked
+    private void tbTotalUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbTotalUsuariosMouseClicked
         // TODO add your handling code here:
         ConexionRegistrarUsuarioTest objetoTegUsu=new ConexionRegistrarUsuarioTest();
-        objetoTegUsu.seleccionarUsuario(tbTotalVacunasDisponibles, txtDni, txtNombre, txtApellido, cboRol, txtUsuario, txtClave);
-    }//GEN-LAST:event_tbTotalVacunasDisponiblesMouseClicked
+        objetoTegUsu.seleccionarUsuario(tbTotalUsuarios, txtDni, txtNombre, txtApellido, cboRol, txtUsuario, txtClave);
+    }//GEN-LAST:event_tbTotalUsuariosMouseClicked
 
     private void txtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDniActionPerformed
         // TODO add your handling code here:
@@ -221,12 +221,15 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
+        ConexionRegistrarUsuarioTest usuarioEliminar= new ConexionRegistrarUsuarioTest();
+        usuarioEliminar.eliminarRegistro(txtDni);
+        usuarioEliminar.mostrarUsuarios(tbTotalUsuarios);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnBuscarDNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarDNIActionPerformed
         // TODO add your handling code here:
         ConexionRegistrarUsuarioTest usuarioBuscado=new ConexionRegistrarUsuarioTest();
-        usuarioBuscado.filtarPorDNI(tbTotalVacunasDisponibles, txtDNIBuscar);
+        usuarioBuscado.filtarPorDNI(tbTotalUsuarios, txtDNIBuscar);
     }//GEN-LAST:event_btnBuscarDNIActionPerformed
 
     private void txtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveActionPerformed
@@ -236,7 +239,7 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
     private void txtDNIBuscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDNIBuscarKeyReleased
         // TODO add your handling code here:
         ConexionRegistrarUsuarioTest usuarioBuscado=new ConexionRegistrarUsuarioTest();
-        usuarioBuscado.filtarPorDNI(tbTotalVacunasDisponibles, txtDNIBuscar);
+        usuarioBuscado.filtarPorDNI(tbTotalUsuarios, txtDNIBuscar);
     }//GEN-LAST:event_txtDNIBuscarKeyReleased
 
 
@@ -249,7 +252,7 @@ public class UsuariosDIsponibles extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel lblBienvenido;
-    private javax.swing.JTable tbTotalVacunasDisponibles;
+    private javax.swing.JTable tbTotalUsuarios;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtClave;
     private javax.swing.JTextField txtDNIBuscar;
